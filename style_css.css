@@ -1,0 +1,118 @@
+body form table tr td input.input_text {
+    border-radius: 10px;
+    width: 500px;
+    padding: 10px;
+}
+
+body form table tr td p,
+body form table tr tr tr td p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+body form table tr td p span .space {
+    margin-left: 300px;
+}
+
+body form table tr td p span span {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+body div form table {
+    border: 2px solid rgb(0, 0, 0);
+    display: flex;
+}
+
+body div form {
+    border-width: 4px;
+    border-style: 1px;
+    /*border: 4px solid black;
+    */
+    border-collapse: collapse;
+}
+
+body form table tr td select {
+    font-size: 15px;
+    margin-right: 150px;
+    width: 221px;
+    height: 40px;
+    padding: 10px;
+}
+
+body form table tr td input .file1 {
+    width: 95px;
+}
+
+body form table tr td .input_number {
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+body form table tbody tr td textarea {
+    width: 99%;
+    height: 50px;
+}
+
+body form table tbody tr td div.label_space {
+    margin-bottom: 10px;
+}
+
+body form table tbody tr td div.label_space input.space1 {
+    margin-left: 120px;
+}
+
+body div form table tbody tr td.input_text2 input {
+    border-radius: 10px;
+    width: 200px;
+    padding: 10px;
+}
+
+body div form table tbody tr td.input_text3 input {
+    border-radius: 10px;
+    width: 495px;
+    padding: 10px;
+}
+
+body div div.choose_file input {
+    margin-left: 0px;
+    margin-right: 698px;
+}
+
+body div div.btn_submit input {
+    width: 75px;
+    height: 30px;
+    margin-left: 92%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 40px;
+    transition: all 0.3s ease 0s;
+    background-color: rgb(65, 106, 240);
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.4);
+}
+
+body div div.btn_submit input:hover {
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+body .center_file {
+    justify-content: center;
+    display: flex;
+    width: 97%;
+    padding-right: 30px;
+}
+
+.table_style_2 {
+    padding: 20px;
+    padding-left: 10px;
+    margin: 0px;
+    width: 100%;
+    border: 1px solid black;
+    background-color: rgb(129, 129, 128)
+}
