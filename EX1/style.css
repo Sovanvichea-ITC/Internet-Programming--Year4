@@ -1,0 +1,53 @@
+#viewport {
+    width: 497px;
+    height: 497px;
+    margin-top: 0px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.img-viewport {
+    width: 497px;
+    height: 497px;
+    margin-top: 0px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.bgk-video {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    border: 15px solid rgb(138, 138, 138);
+    border-bottom: 90px solid rgb(138, 138, 138);
+}
+
+.bgk-text {
+    color: #fff;
+}
+
+.btn {
+    margin: 0px;
+    padding-bottom: 90px;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-img {
+    padding: 20px
+}
+
+.main-content {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+}
+
+p {
+    margin: 10px;
+    color: #fff;
+    font-size: 20px;
+}

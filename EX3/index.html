@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Ex3</title>
+
+</head>
+
+<body>
+    <center>
+        <div class="container">
+            <div class="bgk-video">
+                <canvas id="viewport">
+            </canvas>
+                <p class="bgk-text">Canvas 👻: Please show your face on me</p>
+                <div class="btn">
+                    <center>
+                        <button onclick="myFunction()" id="btn-text">Start</button>
+                    </center>
+
+                </div>
+
+            </div>
+            <div>
+                <center>
+                    <div class="text">Multi Projection with Canvases</div>
+                    <div class="bgk-video2">
+
+                        <canvas id="viewport2" width="760" height="600">
+                </canvas>
+
+                    </div>
+                </center>
+            </div>
+
+        </div>
+    </center>
+    <script async src="./openCV.js" onload="onOpenCvReady();" type="text/javascript"></script>
+    <script src="./myjs.js">
+    </script>
+
+</body>
+
+</html>

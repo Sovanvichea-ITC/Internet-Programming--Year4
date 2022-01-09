@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ex1</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <center>
+        <div class="main-content">
+            <div class="bgk-video">
+                <div class="inputoutput">
+                    <img id="imageSrc" class="img-viewport" width="500px" height="500px" />
+                    <p>Canvas 👻: Insert me an image Please!</p>
+                    <input type="file" id="fileInput" name="file" />
+                </div>
+            </div>
+            <div class="bgk-video">
+                <div class="inputoutput">
+
+                    <canvas id="viewport"></canvas>
+                    <p>Image Ouput by using <br> Canvas</p>
+                </div>
+            </div>
+
+        </div>
+    </center>
+
+    <script type="text/javascript">
+        let imgElement = document.getElementById('imageSrc');
+        let inputElement = document.getElementById('fileInput');
+        inputElement.addEventListener('change', (e) => {
+            imgElement.src = URL.createObjectURL(e.target.files[0]);
+        }, false);
+        imgElement.onload = function() {
+            let mat = cv.imread(imgElement);
+            cv.imshow('viewport', mat);
+            mat.delete();
+        };
+
+        function onOpenCvReady() {
+            document.getElementById('status').innerHTML = 'OpenCV.js is ready.';
+        }
+    </script>
+    <script async src="./openCV.js" onload="onOpenCvReady();" type="text/javascript"></script>
+</body>
+
+</html>
