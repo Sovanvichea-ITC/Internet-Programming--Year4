@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinosaur Game</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        canvas{
+            border: 1px solid rgb(206, 237, 250);
+            background-color: azure;
+        }
+        .parent-container{
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        input, #Start{
+            border-radius: 4px 30px;
+        }
+        #Start:hover{
+            background-color: aqua;
+            width: 200px;
+            height: 30px;
+            color: white;
+            font-size: 15px;
+        }
+        input:hover{
+            background-color: rgb(151, 190, 229);
+            height: 30px;
+            width: 200px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            font-size: 15px;
+        }
+        .row{
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+        .Column{
+            position: relative;
+            Display: flex;
+            align-items: center;
+            margin-left: 5.5rem;
+        }
+        .box{
+            display: flex;
+            padding-right: 1rem;
+        }
+        .weight{
+            width: 50px;
+            height: 50px;
+        }
+        #a:hover{
+            background-color: pink;
+        }
+        #b:hover{
+            background-color: red;
+        }
+        #c:hover{
+            background-color: blue;
+        }
+        #d:hover{
+            background-color: yellow;
+        }
+        #e:hover{
+            background-color: green;
+        }
+        #f:hover{
+            background-color: brown;
+        }
+        #g:hover{
+            background-color: black;
+        }
+        #h:hover{
+            background-color: white;
+        }
+        #i:hover{
+            background-color: orange;
+        }
+        .bigbox{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            transition: box-shadow .5s;
+        }
+        .box1{
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+            padding-top: 8px;
+            padding-left: 10px;
+            box-shadow: 0px 0px 5px 2px rgb(194, 192, 192), inset 0px 0px 5px 2px rgb(194, 192, 192);
+        }
+        .box1:hover{
+            width: 31px;
+            height: 35px;
+            border-radius: 50%;
+            box-shadow:0px 0px 5px 2px rgb(248, 245, 245 );;
+        }
+        .box1{
+            padding-right: 10px;
+        }
+        .parent-container{
+            position: relative;
+            align-items: center;
+            text-align: center;
+        }
+        .starting-container{
+            padding-top: 10px;
+            position: absolute;
+            top: 5%;
+            left: 40%;
+            border: 6px solid white;
+            width: 360px;
+            height: 500px;
+            margin-top: 100px;
+            border-radius: 0px 100px;
+            background-color: rgb(243, 240, 240);
+            padding-left: 10px;
+            box-shadow: 5px 5px 5px 5px gray, inset 5px 5px 5px 5px gray ;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent-container">
+        <canvas id="canvas"></canvas>
+        <div class="starting-container">
+            <h3>Player Name</h3>
+            <br>
+            <input type="text" id="player_name" placeholder="Nickname">
+            <br><br>
+            <div >Choose your Dinosaur</div>
+            <br> <br>
+            <div class="row">
+                <div class="Column">
+                    <div class="box"><button class="weight" id="a">Pink</button></div>
+                    <div class="box"><button class="weight" id="b">Red</button></div>
+                    <div class="box"><button class="weight" id="c">Blue</button></div>
+                </div>
+                <br>
+                <div class="Column">
+                    <div class="box"><button class="weight" id="d">yellow</button></div>
+                    <div class="box"><button class="weight" id="e">Green</button></div>
+                    <div class="box"><button class="weight" id="f">Brown</button></div>
+                </div>
+                <br>
+                <div class="Column">
+                    <div class="box"><button class="weight" id="g">Black</button></div>
+                    <div class="box"><button class="weight" id="h">white</button></div>
+                    <div class="box"><button class="weight" id="i">Orange</button></div>
+                </div>
+            </div>
+            <br> <br>
+            <button onclick="startGame()" id="Start">Start Game</button>
+            <br>
+            <br>
+            <div class="bigbox">
+                <div class="box1"><img src="./assets/1.png" alt="Gmail" width="20px" height="20px" class="text"></div>
+                <div class="box1"><img src="./assets/2.png" alt="Facebook" width="20px" height="20px"></div>
+                <div class="box1"><img src="./assets/3.jpg" alt="Instagram" width="20px" height="20px"></div>
+                <div class="box1"><img src="./assets/4.jpg" alt="Twitter" width="20px" height="20px"></div>
+                <div class="box1"><img src="./assets/5.png" alt="Yahoo" width="20px" height="20px"></div>
+                
+            </div> <br>
+        </div>
+    </div>
+    
+    <script src="./assets/game.js"></script>
+</body>
+</html>
