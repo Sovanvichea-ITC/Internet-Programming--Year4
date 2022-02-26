@@ -31,20 +31,42 @@
             <button type="button" class="btn btn-warning">M+</button>
           </td>
           <td>
-            <button type="button" class="btn btn-light">
+            <button
+              v-on:click="deleteOneNumber()"
+              type="button"
+              class="btn btn-light"
+            >
               <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
             </button>
           </td>
         </tr>
         <tr>
           <td>
-            <button type="button" class="btn btn-light">7</button>
+            <button
+              v-on:click="showNumber(7)"
+              type="button"
+              class="btn btn-light"
+            >
+              7
+            </button>
           </td>
           <td>
-            <button type="button" class="btn btn-light">8</button>
+            <button
+              v-on:click="showNumber(8)"
+              type="button"
+              class="btn btn-light"
+            >
+              8
+            </button>
           </td>
           <td>
-            <button type="button" class="btn btn-light">9</button>
+            <button
+              v-on:click="showNumber(9)"
+              type="button"
+              class="btn btn-light"
+            >
+              9
+            </button>
           </td>
           <td>
             <button type="button" class="btn btn-secondary">÷</button>
@@ -55,13 +77,31 @@
         </tr>
         <tr>
           <td>
-            <button type="button" class="btn btn-light">4</button>
+            <button
+              v-on:click="showNumber(4)"
+              type="button"
+              class="btn btn-light"
+            >
+              4
+            </button>
           </td>
           <td>
-            <button type="button" class="btn btn-light">5</button>
+            <button
+              v-on:click="showNumber(5)"
+              type="button"
+              class="btn btn-light"
+            >
+              5
+            </button>
           </td>
           <td>
-            <button type="button" class="btn btn-light">6</button>
+            <button
+              v-on:click="showNumber(6)"
+              type="button"
+              class="btn btn-light"
+            >
+              6
+            </button>
           </td>
           <td>
             <button type="button" class="btn btn-secondary">x</button>
@@ -81,10 +121,22 @@
             </button>
           </td>
           <td>
-            <button type="button" class="btn btn-light">2</button>
+            <button
+              v-on:click="showNumber(2)"
+              type="button"
+              class="btn btn-light"
+            >
+              2
+            </button>
           </td>
           <td>
-            <button type="button" class="btn btn-light">3</button>
+            <button
+              v-on:click="showNumber(3)"
+              type="button"
+              class="btn btn-light"
+            >
+              3
+            </button>
           </td>
           <td rowspan="2">
             <button type="button" class="btn btn-secondary long-btn">+</button>
@@ -95,13 +147,31 @@
         </tr>
         <tr>
           <td>
-            <button type="button" class="btn btn-danger">C</button>
+            <button
+              v-on:click="deleteAll()"
+              type="button"
+              class="btn btn-danger"
+            >
+              C
+            </button>
           </td>
           <td>
-            <button type="button" class="btn btn-light">0</button>
+            <button
+              v-on:click="showNumber(0)"
+              type="button"
+              class="btn btn-light"
+            >
+              0
+            </button>
           </td>
           <td>
-            <button type="button" class="btn btn-light">.</button>
+            <button
+              v-on:click="pointNumber()"
+              type="button"
+              class="btn btn-light"
+            >
+              .
+            </button>
           </td>
         </tr>
       </table>
@@ -114,7 +184,7 @@
 
 <script>
 export default {
-  name: 'App',
+  name: "App",
   components: {},
   data() {
     return {
@@ -124,10 +194,53 @@ export default {
   },
   methods: {
     showNumber(number) {
+       console.log("hello = " + this.inputNumber);
       // Assign number when user click to the inputNumber data
       // To access private data from methods, use (this.)
+    if (this.inputNumber.length > "14") {
+        alert("Can not input more number !!!");
+        this.inputNumber = this.inputNumber.slice(0, this.inputNumber.length-1)
+      }
+
+      console.log("Length Digit: "+this.inputNumber.length);
+
+      console.log(number);
+      number = this.inputNumber + number.toString();
       this.inputNumber = number;
+      console.log(number);
+
+     
+      if (this.inputNumber[0] == "0" && this.inputNumber.indexOf(".") == -1) {
+        console.log("true");
+        this.inputNumber = this.inputNumber.slice(1);
+      }
+
+      
     },
+
+    pointNumber(){
+
+      if(this.inputNumber == "0"){
+        this.showNumber(0);
+        this.inputNumber = this.inputNumber + ".";
+      }else if(this.inputNumber.indexOf(".") > -1 ){
+        this.inputNumber = this.inputNumber + "";
+      }else{
+        this.inputNumber = this.inputNumber + ".";
+      }
+     
+    },
+
+    deleteAll() {
+      this.inputNumber = 0;
+    },
+
+    deleteOneNumber() {
+      console.log(this.inputNumber);
+
+      this.inputNumber = this.inputNumber.slice(0, this.inputNumber.length - 1);
+    },
+
   },
 };
 </script>
