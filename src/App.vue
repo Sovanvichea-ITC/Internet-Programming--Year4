@@ -190,11 +190,12 @@ export default {
     return {
       // This is the private data section which can be used inside this component
       inputNumber: 0,
+      operand1:0,
     };
   },
   methods: {
     showNumber(number) {
-       console.log("hello = " + this.inputNumber);
+       
       // Assign number when user click to the inputNumber data
       // To access private data from methods, use (this.)
     if (this.inputNumber.length > "14") {
@@ -202,20 +203,23 @@ export default {
         this.inputNumber = this.inputNumber.slice(0, this.inputNumber.length-1)
       }
 
-      console.log("Length Digit: "+this.inputNumber.length);
+     // console.log("Length Digit: "+this.inputNumber.length);
 
-      console.log(number);
+     // console.log(number);
       number = this.inputNumber + number.toString();
       this.inputNumber = number;
-      console.log(number);
+      //console.log(number);
 
      
       if (this.inputNumber[0] == "0" && this.inputNumber.indexOf(".") == -1) {
-        console.log("true");
+       // console.log("true");
         this.inputNumber = this.inputNumber.slice(1);
       }
 
-      
+      this.operation1 = parseFloat(this.inputNumber);
+      console.log("NumberDisplay = " + this.inputNumber);
+      console.log("operation1 = " + this.operation1);
+      console.log("");
     },
 
     pointNumber(){
@@ -223,22 +227,35 @@ export default {
       if(this.inputNumber == "0"){
         this.showNumber(0);
         this.inputNumber = this.inputNumber + ".";
+        console.log("NumberDisplay = 0.")
+        console.log("operation1 = " + this.operation1);
+        console.log("");
+        
       }else if(this.inputNumber.indexOf(".") > -1 ){
         this.inputNumber = this.inputNumber + "";
       }else{
         this.inputNumber = this.inputNumber + ".";
+        console.log("NumberDisplay = " + this.inputNumber)
+        this.operation1 = parseFloat(this.inputNumber);
+        console.log("operation1 = " + this.operation1);
+        console.log("");
       }
      
     },
 
     deleteAll() {
       this.inputNumber = 0;
+      console.log("clear");
+      console.log("");
     },
 
     deleteOneNumber() {
       console.log(this.inputNumber);
-
-      this.inputNumber = this.inputNumber.slice(0, this.inputNumber.length - 1);
+     if(this.inputNumber.length <= 1){
+        this.inputNumber = 0;
+      }else if(this.inputNumber.length > 0){
+        this.inputNumber = this.inputNumber.slice(0, this.inputNumber.length - 1);
+      }
     },
 
   },
