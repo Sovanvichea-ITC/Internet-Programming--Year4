@@ -10,6 +10,10 @@ npm install
 npm run serve
 ```
 
+### Modify by 
+```
+Sovanvichea
+```
 ### Compiles and minifies for production
 ```
 npm run build
