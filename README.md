@@ -1,3 +1,7 @@
+### Modify by 
+```
+Sovanvichea
+```
 # sample-vue1
 
 ## Project setup
@@ -10,10 +14,6 @@ npm install
 npm run serve
 ```
 
-### Modify by 
-```
-Sovanvichea
-```
 ### Compiles and minifies for production
 ```
 npm run build
