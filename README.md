@@ -1,6 +1,4 @@
-# Modify by 
-
-# Sovanvichea
+# Modify by Sovanvichea YANN
 
 # sample-vue1
 
